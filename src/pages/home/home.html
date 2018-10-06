@@ -1,14 +1,46 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Search lecturer</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Name</ion-label>
+      <ion-input type="text" placeholder="Enter name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>College</ion-label>
+      <ion-select placeholder="Select college" [(ngModel)]="college">
+        <ion-option value="coe">COE</ion-option>
+        <ion-option value="csit">CSIT</ion-option>
+        <ion-option value="cfds">CFDS</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Department (Optional)</ion-label>
+      <ion-select placeholder="Select department" [(ngModel)]="department">
+        <ion-option value="se">Software Engineering</ion-option>
+        <ion-option value="sn">System Networking</ion-option>
+        <ion-option value="vm">Visual Media</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button block (click)="searchResult()">Submit</button>
 </ion-content>
