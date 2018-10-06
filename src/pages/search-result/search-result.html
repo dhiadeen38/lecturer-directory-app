@@ -8,6 +8,12 @@
 
   <ion-navbar no-border-bottom>
     <ion-title>Lecturer list</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only clear (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
   <ion-toolbar no-border-top>

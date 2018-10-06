@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SearchResultPage } from '../pages/search-result/search-result';
+import { PopoverComponent } from '../components/popover/popover';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    SearchResultPage
+    SearchResultPage,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { SearchResultPage } from '../pages/search-result/search-result';
   entryComponents: [
     MyApp,
     HomePage,
-    SearchResultPage
+    SearchResultPage,
+    PopoverComponent
   ],
   providers: [
     StatusBar,
