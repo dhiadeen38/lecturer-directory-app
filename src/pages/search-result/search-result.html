@@ -27,26 +27,12 @@
   <ion-item-group>
     <ion-item-divider color="light">A</ion-item-divider>
     <ion-list>
-      <ion-item>
+      <ion-item *ngFor="let lecturer of lecturers">
         <ion-thumbnail item-start>
-          <img src="img/thumbnail-totoro.png">
+          <img src="">
         </ion-thumbnail>
-        <h2>Zailani Bt Ibrahim</h2>
-        <p>CSIT • Dept Software Eng</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-    </ion-list>
-  </ion-item-group>
-
-  <ion-item-group>
-    <ion-item-divider color="light">Z</ion-item-divider>
-    <ion-list>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-totoro.png">
-        </ion-thumbnail>
-        <h2>Zailani Bt Ibrahim</h2>
-        <p>CSIT • Dept Software Eng</p>
+        <h2>{{lecturer.name}}</h2>
+        <p>{{lecturer.username}} • {{lecturer.email}}</p>
         <button ion-button clear item-end>View</button>
       </ion-item>
     </ion-list>

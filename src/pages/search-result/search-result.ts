@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PopoverController } from 'ionic-angular';
-
 import { PopoverComponent } from '../../components/popover/popover';
+import { HttpClient } from '@angular/common/http';
+
 /**
  * Generated class for the SearchResultPage page.
  *
@@ -17,13 +18,23 @@ import { PopoverComponent } from '../../components/popover/popover';
 })
 export class SearchResultPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
+  public lecturers:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController, public http: HttpClient) {
+    this.getLecturer();
   }
 
   presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverComponent);
     popover.present({
       ev: myEvent
+    });
+  }
+
+  getLecturer(){
+    let url = 'https://jsonplaceholder.typicode.com/users';
+    let data: Observable<any> = this.http.get(url);
+    data.subscribe(result => {
+      this.lecturers = result;
     });
   }
 
