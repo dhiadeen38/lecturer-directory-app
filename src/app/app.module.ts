@@ -3,19 +3,23 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { SearchResultPage } from '../pages/search-result/search-result';
 import { PopoverComponent } from '../components/popover/popover';
 import { HttpClientModule } from '@angular/common/http';
+
+import { HomePage } from '../pages/home/home';
+import { SearchResultPage } from '../pages/search-result/search-result';
+import { FloorplanPage } from '../pages/floorplan/floorplan';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SearchResultPage,
-    PopoverComponent
+    PopoverComponent,
+    FloorplanPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     MyApp,
     HomePage,
     SearchResultPage,
-    PopoverComponent
+    PopoverComponent,
+    FloorplanPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
+import { FloorplanPage } from '../../pages/floorplan/floorplan';
+import { AboutPage } from '../../pages/about/about';
 /**
  * Generated class for the PopoverComponent component.
  *
@@ -12,14 +15,15 @@ import { Component } from '@angular/core';
 })
 export class PopoverComponent {
 
-  items: any;
-  text: string;
+  constructor(public navCtrl: NavController) {
 
-  constructor() {
-    this.items = [
-      {item: 'Floorplan'},
-      {item: 'About app'},
-    ]
   }
 
+  openFloorplan(){
+    this.navCtrl.push(FloorplanPage)
+  }
+
+  openAbout(){
+    this.navCtrl.push(AboutPage)
+  }
 }
